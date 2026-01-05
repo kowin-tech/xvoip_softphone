@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - xVoIP Softphone</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <a href="index.html" class="logo">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+          </svg>
+          xVoIP
+        </a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="index.html#features">Features</a>
+        <a href="index.html#quickstart">Quick Start</a>
+        <a href="privacy.html" class="active">Privacy</a>
+        <a href="index.html#support">Support</a>
+        <a href="https://buymeacoffee.com/xvoip" target="_blank" class="btn-coffee">Buy me a ☕</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <article class="privacy-policy">
+      <h1>Privacy Policy</h1>
+      <p class="last-updated"><strong>Last Updated:</strong> January 2, 2026</p>
+
+      <section>
+        <h2>Introduction</h2>
+        <p>This Privacy Policy describes how xVoIP ("we", "our", or "us") collects, uses, and protects information when you use the xVoIP Softphone browser extension ("Extension").</p>
+      </section>
+
+      <section>
+        <h2>Information We Collect</h2>
+
+        <h3>Information You Provide</h3>
+        <p><strong>SIP Account Credentials:</strong></p>
+        <ul>
+          <li>Server address</li>
+          <li>Extension number</li>
+          <li>SIP password</li>
+          <li>Domain configuration</li>
+          <li>Display name</li>
+        </ul>
+
+        <p><strong>Optional AI Service Configuration:</strong></p>
+        <ul>
+          <li>API keys for third-party AI services (Groq, OpenAI, or Anthropic)</li>
+          <li>Custom summarization prompts</li>
+        </ul>
+
+        <h3>Information Generated During Use</h3>
+        <p><strong>Call History:</strong></p>
+        <ul>
+          <li>Phone numbers called or received</li>
+          <li>Call direction (inbound/outbound)</li>
+          <li>Call timestamps and duration</li>
+          <li>Call outcome (answered, missed, rejected)</li>
+        </ul>
+
+        <p><strong>Call Recordings</strong> (When Enabled):</p>
+        <ul>
+          <li>Audio recordings of calls</li>
+          <li>Recording duration and timestamps</li>
+        </ul>
+
+        <p><strong>Call Transcriptions</strong> (When Enabled):</p>
+        <ul>
+          <li>Text transcriptions of call audio</li>
+          <li>Speaker identification (local/remote)</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>How Information Is Stored</h2>
+        <h3>Local Storage Only</h3>
+        <p>All data collected by this Extension is stored <strong>locally on your device</strong> using Chrome's secure extension storage APIs:</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Data Type</th>
+              <th>Storage Location</th>
+              <th>Synced Across Devices</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>SIP Passwords</td>
+              <td>chrome.storage.local</td>
+              <td>No</td>
+            </tr>
+            <tr>
+              <td>AI API Keys</td>
+              <td>chrome.storage.local</td>
+              <td>No</td>
+            </tr>
+            <tr>
+              <td>Account Settings</td>
+              <td>chrome.storage.sync</td>
+              <td>Yes (encrypted by Google)</td>
+            </tr>
+            <tr>
+              <td>Call History</td>
+              <td>chrome.storage.local</td>
+              <td>No</td>
+            </tr>
+            <tr>
+              <td>Transcriptions</td>
+              <td>chrome.storage.local</td>
+              <td>No</td>
+            </tr>
+            <tr>
+              <td>Call Recordings</td>
+              <td>Downloads folder</td>
+              <td>No</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p><strong>Important:</strong> We do not operate any servers that receive or store your data. All Extension functionality operates entirely on your device.</p>
+      </section>
+
+      <section>
+        <h2>How Information Is Used</h2>
+
+        <h3>SIP Credentials</h3>
+        <ul>
+          <li>Used exclusively to authenticate with your SIP/VoIP server</li>
+          <li>Transmitted only to the server address you configure</li>
+          <li>Transmitted over encrypted WebSocket connections (WSS)</li>
+        </ul>
+
+        <h3>AI API Keys</h3>
+        <ul>
+          <li>Used only when you explicitly enable AI features (transcription summarization)</li>
+          <li>Transmitted directly to the AI provider you select (Groq, OpenAI, or Anthropic)</li>
+          <li>We do not have access to your API keys or the data sent to these services</li>
+        </ul>
+
+        <h3>Call History & Recordings</h3>
+        <ul>
+          <li>Stored locally for your convenience</li>
+          <li>Never transmitted to any external service</li>
+          <li>Recordings saved to your Downloads folder</li>
+        </ul>
+
+        <h3>Call Transcriptions</h3>
+        <ul>
+          <li>Generated using Chrome's built-in Web Speech API (processed by Google)</li>
+          <li>Stored locally on your device</li>
+          <li>Optionally sent to AI providers for summarization (only if you enable this feature)</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Third-Party Services</h2>
+
+        <h3>Your SIP/VoIP Provider</h3>
+        <p>The Extension connects to the SIP server you configure. Your call data (audio, signaling) is transmitted to and processed by your SIP provider according to their privacy practices.</p>
+
+        <h3>AI Service Providers (Optional)</h3>
+        <p>If you enable AI summarization, call transcriptions are sent to your chosen provider:</p>
+        <ul>
+          <li><strong>Groq:</strong> <a href="https://groq.com/privacy" target="_blank">https://groq.com/privacy</a></li>
+          <li><strong>OpenAI:</strong> <a href="https://openai.com/privacy" target="_blank">https://openai.com/privacy</a></li>
+          <li><strong>Anthropic:</strong> <a href="https://www.anthropic.com/privacy" target="_blank">https://www.anthropic.com/privacy</a></li>
+        </ul>
+
+        <h3>Google Web Speech API</h3>
+        <p>When transcription is enabled, audio is processed by Google's Web Speech API for speech-to-text conversion. See <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a>.</p>
+      </section>
+
+      <section>
+        <h2>Data Retention</h2>
+        <ul>
+          <li><strong>Call History:</strong> Last 100 calls retained locally</li>
+          <li><strong>Transcriptions:</strong> Configurable limit (default: 10 most recent)</li>
+          <li><strong>Recordings:</strong> Stored in Downloads folder until you delete them</li>
+          <li><strong>Credentials:</strong> Stored until you remove them or uninstall the Extension</li>
+        </ul>
+        <p>You can clear all stored data at any time through the Extension's Settings page.</p>
+      </section>
+
+      <section>
+        <h2>Data Security</h2>
+        <p>We implement the following security measures:</p>
+        <ol>
+          <li><strong>Encrypted Transport:</strong> All SIP connections use WSS (WebSocket Secure)</li>
+          <li><strong>Local Storage:</strong> Sensitive data stored in Chrome's protected extension storage</li>
+          <li><strong>No Server Storage:</strong> We do not operate servers that store your data</li>
+          <li><strong>Content Security Policy:</strong> Extension code is protected against injection attacks</li>
+          <li><strong>Manifest V3:</strong> Uses Chrome's latest, most secure extension architecture</li>
+        </ol>
+      </section>
+
+      <section>
+        <h2>Your Rights</h2>
+        <p>You have the right to:</p>
+        <ul>
+          <li><strong>Access:</strong> View all data stored by the Extension in Settings</li>
+          <li><strong>Delete:</strong> Clear call history, transcriptions, and recordings at any time</li>
+          <li><strong>Portability:</strong> Export call recordings from your Downloads folder</li>
+          <li><strong>Withdraw:</strong> Disable any optional features (recording, transcription, AI summarization)</li>
+          <li><strong>Uninstall:</strong> Remove the Extension to delete all stored data</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Permissions Explained</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Permission</th>
+              <th>Why We Need It</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>storage</td><td>Store your settings and call history locally</td></tr>
+            <tr><td>notifications</td><td>Alert you to incoming calls</td></tr>
+            <tr><td>activeTab</td><td>Enable click-to-dial on the current page</td></tr>
+            <tr><td>tabs</td><td>Open softphone in a tab for microphone access</td></tr>
+            <tr><td>offscreen</td><td>Maintain SIP connection when popup is closed</td></tr>
+            <tr><td>alarms</td><td>Keep SIP registration active</td></tr>
+            <tr><td>downloads</td><td>Save call recordings to your Downloads folder</td></tr>
+            <tr><td>wss://*/*</td><td>Connect to your SIP server via secure WebSocket</td></tr>
+            <tr><td>&lt;all_urls&gt;</td><td>Detect phone numbers on any webpage</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section>
+        <h2>Children's Privacy</h2>
+        <p>This Extension is not intended for use by children under 13 years of age. We do not knowingly collect personal information from children.</p>
+      </section>
+
+      <section>
+        <h2>Changes to This Policy</h2>
+        <p>We may update this Privacy Policy from time to time. Changes will be reflected in the "Last Updated" date above. Continued use of the Extension after changes constitutes acceptance of the updated policy.</p>
+      </section>
+
+      <section>
+        <h2>Contact Us</h2>
+        <p>If you have questions about this Privacy Policy, please contact:</p>
+        <p>
+          <strong>xVoIP</strong><br>
+          Email: <a href="mailto:support@xvoip.co.za">support@xvoip.co.za</a><br>
+          Website: <a href="https://xvoip.co.za">https://xvoip.co.za</a>
+        </p>
+      </section>
+
+      <section class="summary-box">
+        <h2>Summary</h2>
+        <ul>
+          <li>All data stored locally on your device</li>
+          <li>We do not operate servers that collect your data</li>
+          <li>Credentials transmitted only to servers you configure</li>
+          <li>Optional AI features use third-party providers</li>
+          <li>You control all data and can delete it anytime</li>
+        </ul>
+      </section>
+    </article>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 xVoIP. All rights reserved.</p>
+      <p><a href="privacy.html">Privacy Policy</a> | <a href="mailto:support@xvoip.co.za">Contact</a></p>
+    </div>
+  </footer>
+</body>
+</html>
