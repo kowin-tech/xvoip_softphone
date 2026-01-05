@@ -518,6 +518,54 @@ nav a.btn-coffee:hover {
   font-size: 15px;
 }
 
+.info-icon {
+  position: relative;
+  color: #2196f3;
+  font-size: 22px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-left: 4px;
+}
+
+.info-icon:hover {
+  color: #1976d2;
+}
+
+.info-tooltip {
+  display: none;
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 280px;
+  padding: 12px;
+  margin-bottom: 8px;
+  background: #333;
+  color: #fff;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: left;
+  z-index: 100;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.info-tooltip::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+  border-top-color: #333;
+}
+
+.info-icon:hover .info-tooltip,
+.info-icon:focus .info-tooltip {
+  display: block;
+}
+
 /* Screenshots Section */
 .screenshots {
   padding: 80px 0;
@@ -623,6 +671,11 @@ nav a.btn-coffee:hover {
 .step p {
   color: #666;
   font-size: 15px;
+}
+
+.config-note {
+  margin-top: 8px;
+  color: #888;
 }
 
 /* Support Section */
